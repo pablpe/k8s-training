@@ -1,0 +1,13 @@
+services:
+  frontend:
+    image: pablop115/json-server-front
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+  backend:
+    image: pablop115/json-server
+    volumes:
+      - ./backend/db.json:/articles.json
+    ports:
+      - "3000:3000"

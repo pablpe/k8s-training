@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const productsContainer = document.getElementById('products');
 
     // Fetch products from the local JSON server via NGINX proxy
-    fetch('/api/products')
+    fetch('/api/products') // originally fetch('/api/products')
         .then(response => response.json())
         .then(data => {
             data.forEach(product => {
